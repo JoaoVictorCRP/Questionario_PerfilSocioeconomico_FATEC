@@ -282,8 +282,8 @@ def empilhar_coluna(coluna1,coluna2):
         if isinstance(resposta, str):
             # Verifica se a resposta é uma string vazia ou apenas contém espaços em branco
             if resposta.strip() == '':
-                continue  # Ignora células vazias
-        elif isinstance(resposta, float):# Verifica se a resposta é NaN
+                continue
+        elif isinstance(resposta, float):
             if math.isnan(resposta):
                 continue #Ignora NaN
         
@@ -295,16 +295,15 @@ def empilhar_coluna(coluna1,coluna2):
 
     for resposta2 in coluna2: #não era necessário que a var. de iteração fosse 'resposta2', poderia ser 'resposta' como no primeiro, porém fiz isso para não me confundir!
         if isinstance(resposta2, str):
-            #verifica se a resposta é uma string vazia ou apenas contém espaços em branco
             if resposta2.strip() == '':
-                continue  #ignora células vazias
+                continue
 
-        elif isinstance(resposta2, float):#Verifica se a resposta é NaN
+        elif isinstance(resposta2, float):
             if math.isnan(resposta2):
-                continue #ignora NaN
+                continue
 
         if resposta2 == 'Tenho e é uma plano individual':
-            resposta2 = 'Tenho e é um plano individual.' #corrigindo um erro ortográfico que gera problema no gráfico.
+            resposta2 = 'Tenho e é um plano individual.' #corrigindo erro ortográfico que gera problema no gráfico.
         
         if resposta2 not in valores.keys():
             valores[resposta2] = 1
@@ -312,8 +311,3 @@ def empilhar_coluna(coluna1,coluna2):
             valores[resposta2] +=1
 
     return valores 
-
-
-
-    
-
