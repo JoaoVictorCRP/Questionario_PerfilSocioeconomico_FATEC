@@ -340,7 +340,7 @@ def trat_nuvem(dados_nuvem): #função de tratamento das abertas
     if titulo_pergunta != 'Qual empresa que você está contratado agora?':
         janela.withdraw() #fechar a interface temporariamente (a menos que seja a nuvem de empresas)
         
-    #Perguntas onde era possível mais de uma resposta também são tratadas em nuvem. (As repostas múltiplas são separadas por ponto e vírgula)
+    #Prgnts onde é possível mais de uma resposta também são tratadas como nuvem(As respostas são separadas por ponto e vírgula)
     trat_pontovirgula = ['Quais fontes de ENTRETENIMENTO CULTURAL você usa?*', 'Quais os assuntos que mais lê?', 'Por que escolheu este curso?']
 
     fig,ax = plt.subplots()
