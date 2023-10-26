@@ -280,7 +280,6 @@ def empilhar_coluna(coluna1,coluna2):
     valores = {}
     for resposta in coluna1:
         if isinstance(resposta, str):
-            # Verifica se a resposta é uma string vazia ou apenas contém espaços em branco
             if resposta.strip() == '':
                 continue
         elif isinstance(resposta, float):

@@ -27,7 +27,7 @@ def proximo(evento):
             #caso esteja na última pergunta d categoria emprego, a nuvem de palavras é aberta!
         else:
 
-            zerar_aux() #rezerando o aux para não dar problemas
+            zerar_aux()
         
             reabrir_interface()
     else:
@@ -64,7 +64,7 @@ def executar(tema):
     global temaatual
     if aux==0: #só vai "fechar" a GUI se for a primeira pergunta 
         
-        janela.withdraw() #fechando temporariamente a GUI
+        janela.withdraw()
     
     temaatual=tema
     
