@@ -324,6 +324,7 @@ def exibirgrafico(pergunta_dados, temaatual):#função para tratamento das perg.
 def trat_nuvem(dados_nuvem): #função de tratamento das abertas
 
     from wordcloud import WordCloud as wc #função para criar uma nuvem de palavras ;
+    import nltk
     from nltk.corpus import stopwords as sw # bibl. para contar palavras em texto ;
     from nltk.tokenize import word_tokenize as wt #tokenização de palavras ; 
     from collections import Counter #função contadora , semelhante ao ntlk porém mais simples.
@@ -333,6 +334,9 @@ def trat_nuvem(dados_nuvem): #função de tratamento das abertas
     global botao_proximo
     global botao_anterior
 
+    # Download dos módulos necessários
+    nltk.download('punkt')
+    nltk.download('stopwords')
 
     dados_filtrados = fi.filtrarNuvem(dados_nuvem)
     titulo_pergunta = dados_nuvem.name #nome da coluna
